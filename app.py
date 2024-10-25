@@ -7,7 +7,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/greet', methods=['POST'])
-def greet():
+deff greet():
     name = request.form.get('name')
     if not name:
         return redirect(url_for('index'))
