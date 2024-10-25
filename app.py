@@ -2,12 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-@app.route('/'),
+@app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/greet', methods=['POST'])
-deff greet():
+def greet():
     name = request.form.get('name')
     if not name:
         return redirect(url_for('index'))
